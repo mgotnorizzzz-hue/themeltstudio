@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Melt Studio — Owner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#241412;--cream:#f4eee2;--paper:#fbf7f0;--brown:#3a2520;--brown2:#4a3029;--muted:#9d8980;--line:rgba(244,238,226,.13);--burg:#7a0000;--green:#315b43;--green-bg:#dce9df;--amber:#8a5a18;--amber-bg:#f4e5c9;--shadow:0 18px 50px rgba(25,12,8,.16)}
+*{box-sizing:border-box}html{background:var(--ink)}body{margin:0;background:radial-gradient(circle at 85% 5%,#4a2d25 0,#241412 32%,#1d100e 100%);color:var(--cream);font-family:Arial,sans-serif;min-height:100vh}.wrap{max-width:1320px;margin:auto;padding:42px 5vw 80px}.k{font:9px 'DM Mono',monospace;letter-spacing:2.5px;text-transform:uppercase;color:#bdaaa2}.top{display:flex;justify-content:space-between;align-items:flex-end;gap:20px}.brandline{display:flex;align-items:center;gap:10px}.dot{width:8px;height:8px;background:#c9a77e;border-radius:50%;box-shadow:0 0 18px #c9a77e66}.title{font:600 clamp(50px,7vw,92px)/.82 'Playfair Display',serif;letter-spacing:-.07em;margin:15px 0 34px}.subtitle{color:#c8b8b0;font-size:12px;line-height:1.6;max-width:520px}.login{max-width:440px;border:1px solid var(--line);padding:28px;background:rgba(58,37,32,.88);border-radius:20px;box-shadow:var(--shadow)}.login input{width:100%;padding:14px 15px;background:var(--paper);border:0;margin:13px 0;color:var(--ink);border-radius:10px;font-size:14px;outline:none}.btn{border:0;background:var(--cream);color:var(--ink);padding:13px 18px;font:600 9px 'DM Mono',monospace;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;border-radius:999px;transition:.2s}.btn:hover{transform:translateY(-1px);box-shadow:0 8px 20px #0003}.btn.dark{background:var(--brown2);color:var(--cream);border:1px solid var(--line)}.hidden{display:none!important}.dashboard-head{margin-top:30px;display:flex;justify-content:space-between;align-items:center;gap:18px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px 0 28px}.stat{background:rgba(244,238,226,.07);border:1px solid var(--line);border-radius:18px;padding:18px 20px}.stat-label{font:8px 'DM Mono';letter-spacing:1.5px;text-transform:uppercase;color:#bdaaa2}.stat-value{font:600 30px 'Playfair Display';margin-top:7px}.stat.pending .stat-value{color:#e5c48e}.stat.done .stat-value{color:#9fc4aa}.orders{display:grid;gap:16px}.empty{padding:40px;border:1px dashed var(--line);border-radius:18px;text-align:center;background:#ffffff05}.order{background:var(--paper);color:var(--ink);border-radius:20px;padding:0;overflow:hidden;box-shadow:0 10px 32px rgba(0,0,0,.15)}.order-top{display:flex;justify-content:space-between;align-items:center;gap:15px;padding:18px 20px;background:#efe5d5;border-bottom:1px solid #24141218}.id{font:10px 'DM Mono';letter-spacing:1px}.date{font:10px Arial;color:#796861;margin-top:4px}.status{font:600 9px 'DM Mono';padding:8px 12px;border-radius:999px;border:0}.status.pending{background:var(--amber-bg);color:var(--amber)}.status.completed{background:var(--green-bg);color:var(--green)}.order-grid{display:grid;grid-template-columns:1.05fr 1.25fr .85fr;gap:0}.panel{padding:20px;border-right:1px solid #24141212}.panel:last-child{border-right:0}.section-label{font:8px 'DM Mono';letter-spacing:1.6px;text-transform:uppercase;color:#8c7770;margin-bottom:10px}.customer-name{font:600 18px 'Playfair Display';margin-bottom:7px}.bodytext{font-size:11px;line-height:1.65;color:#594740}.items{font-size:11px;line-height:1.9}.item-row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #24141210;padding:5px 0}.item-row:last-child{border-bottom:0}.money{font:600 16px 'DM Mono';margin-top:10px}.delivery-chip{display:inline-flex;margin-top:8px;padding:6px 8px;border-radius:999px;background:#eadbd3;color:#68453a;font:8px 'DM Mono';text-transform:uppercase;letter-spacing:.6px}.select{background:var(--ink);color:var(--cream);border:0;padding:9px 11px;border-radius:999px;font:9px 'DM Mono';cursor:pointer}.footer-note{margin-top:24px;color:#8f7c74;font:8px 'DM Mono';letter-spacing:1px;text-transform:uppercase;text-align:center}@media(max-width:850px){.stats{grid-template-columns:1fr}.order-grid{grid-template-columns:1fr}.panel{border-right:0;border-bottom:1px solid #24141212}.panel:last-child{border-bottom:0}.dashboard-head,.top{align-items:flex-start;flex-direction:column}.order-top{align-items:flex-start;flex-direction:column}.wrap{padding:30px 18px 60px}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="brandline"><span class="dot"></span><div class="k">The Melt Studio · private</div></div>
+  <div class="top"><div><h1 class="title">OWNER<br>DASHBOARD.</h1><p class="subtitle">A calm little command centre for your orders — see what needs attention, what is complete, and every delivery detail at a glance.</p></div><button id="logout" class="btn dark hidden">LOG OUT</button></div>
+  <section id="login" class="login"><div class="k">Owner access</div><input id="password" type="password" placeholder="Enter owner password"><button id="loginBtn" class="btn">ENTER DASHBOARD →</button><p id="loginMsg" class="subtitle"></p></section>
+  <section id="dash" class="hidden">
+    <div class="dashboard-head"><div><div class="k">Orders</div><div class="subtitle">Fresh orders appear here automatically. Update the status when an order is completed.</div></div><button id="refresh" class="btn">↻ REFRESH</button></div>
+    <div class="stats"><div class="stat"><div class="stat-label">Total orders</div><div id="statTotal" class="stat-value">0</div></div><div class="stat pending"><div class="stat-label">Pending</div><div id="statPending" class="stat-value">0</div></div><div class="stat done"><div class="stat-label">Completed</div><div id="statDone" class="stat-value">0</div></div></div>
+    <div id="orders" class="orders"></div>
+    <div class="footer-note">The Melt Studio · bite · crave · repeat</div>
+  </section>
+</main>
+<script>
+const login=document.getElementById('login'),dash=document.getElementById('dash'),orders=document.getElementById('orders');
+async function api(url,opt){
+  let r;
+  try{r=await fetch(url,opt)}catch(e){throw new Error('Dashboard server is not running. Start the Melt Studio server with npm start, then open http://localhost:3000/admin.');}
+  const type=r.headers.get('content-type')||'';
+  if(!type.includes('application/json')){
+    throw new Error('This dashboard is being opened without the Melt Studio backend. Open http://localhost:3000/admin after running npm start.');
+  }
+  const j=await r.json();
+  if(!r.ok)throw new Error(j.error||'Request failed');
+  return j;
+}
+async function boot(){try{const m=await api('/api/admin/me');if(m.authenticated)showDash()}catch(e){}}
+function showDash(){login.classList.add('hidden');dash.classList.remove('hidden');document.getElementById('logout').classList.remove('hidden');load()}
+document.getElementById('loginBtn').onclick=async()=>{try{await api('/api/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password:document.getElementById('password').value})});showDash()}catch(e){document.getElementById('loginMsg').textContent=e.message}}
+document.getElementById('logout').onclick=async()=>{await api('/api/admin/logout',{method:'POST'});location.reload()};document.getElementById('refresh').onclick=load;
+async function load(){
+ const data=await api('/api/admin/orders');
+ const pending=data.filter(o=>o.status==='Pending').length,done=data.filter(o=>o.status==='Completed').length;
+ document.getElementById('statTotal').textContent=data.length;document.getElementById('statPending').textContent=pending;document.getElementById('statDone').textContent=done;
+ orders.innerHTML=data.length?data.map(o=>{
+  const delivery=o.delivery||{}, distance=Number(delivery.distanceKm), fee=Number(delivery.fee), total=Number(o.total), subtotal=Number(o.subtotal)||0;
+  const distanceText=Number.isFinite(distance)?distance.toFixed(1)+' km':(delivery.manualConfirmation?'Manual confirmation':'—');
+  const feeText=Number.isFinite(fee)?'₹'+fee:'To confirm';
+  const totalText=Number.isFinite(total)?'₹'+total.toFixed(0):'To confirm';
+  const statusClass=String(o.status||'').toLowerCase().replace(/\s+/g,'-');
+  return `<article class="order"><div class="order-top"><div><div class="id">${esc(o.orderId)}</div><div class="date">${new Date(o.createdAt).toLocaleString('en-IN')}</div></div><div style="display:flex;align-items:center;gap:9px"><span class="status ${statusClass}">${esc(o.status||'Pending')}</span><select class="select" data-id="${esc(o.orderId)}"><option ${o.status==='Pending'?'selected':''}>Pending</option><option ${o.status==='Completed'?'selected':''}>Completed</option><option ${o.status==='Delivery enquiry'?'selected':''}>Delivery enquiry</option></select></div></div><div class="order-grid"><div class="panel"><div class="section-label">Customer</div><div class="customer-name">${esc(o.customer?.name)}</div><div class="bodytext">${esc(o.customer?.phone)}<br>${esc(o.customer?.flat||'')}<br>${esc(o.customer?.address)}</div></div><div class="panel"><div class="section-label">Order items</div><div class="items">${(o.items||[]).map(i=>`<div class="item-row"><span>${esc(i.name)}${i.choice?' · '+esc(i.choice):''} × ${i.qty}</span><strong>₹${((Number(i.price)||0)*(Number(i.qty)||0)).toFixed(0)}</strong></div>`).join('')}</div><div class="bodytext" style="margin-top:9px">Subtotal · ₹${subtotal.toFixed(0)}</div></div><div class="panel"><div class="section-label">Delivery</div><div class="bodytext">${distanceText}<br>${feeText}</div>${delivery.partner?'<div class="delivery-chip">Delivery partner</div>':''}<div class="section-label" style="margin-top:18px">Grand total</div><div class="money">${totalText}</div></div></div></article>`;
+}).join(''):'<div class="empty"><div class="section-label">No orders yet</div><div class="bodytext">New orders will appear here as soon as a customer checks out.</div></div>';
+ orders.querySelectorAll('select').forEach(s=>s.onchange=async()=>{await api('/api/admin/orders/'+s.dataset.id,{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({status:s.value})});load()})
+}
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+boot();
+</script>
+</body></html>
